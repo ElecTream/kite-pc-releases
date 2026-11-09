@@ -1,6 +1,6 @@
 # Kite for Windows (test builds)
 
-Kite is a private, no-nonsense web browser for Windows. Under the hood it is Firefox, set up the way Leeam wants it: no telemetry, no Firefox account, no sponsored anything, tracking protection on strict, and uBlock Origin and a cookie-banner blocker built in. It is an early test build, so expect rough edges. Thank you for trying it.
+Kite is a private, no-nonsense web browser for Windows. Under the hood it is Firefox, set up for privacy: no telemetry, no Firefox account, no sponsored anything, tracking protection on strict, and uBlock Origin and a cookie-banner blocker built in. It is an early test build, so expect rough edges. Thank you for trying it.
 
 ## Install
 
@@ -25,16 +25,17 @@ Kite updates itself. A new version downloads quietly and starts the next time yo
 
 ## What Kite never sends
 
-No telemetry, no crash reports, no Firefox or Mozilla accounts, no sync, no studies, no sponsored content, no search suggestions, no Safe Browsing lookups, no captive-portal checks. DNS-over-HTTPS is off, so your DNS stays with Windows. Kite itself only talks to Mozilla (to get and update the browser engine, once a day at most) and to this GitHub repo (to update Kite). Extensions you install yourself make their own connections, and Proton Pass talks to Proton.
+No telemetry, no crash reports, no Firefox or Mozilla accounts, no sync, no studies, no sponsored content, no search suggestions, no captive-portal checks. DNS-over-HTTPS is off, so your DNS stays with Windows. Kite itself only talks to Mozilla (to get and update the browser engine, once a day at most), to this GitHub repo (to update Kite), to Google for Safe Browsing (about every half hour it fetches updated lists of known bad sites, naming no address; when a page matches the local list it sends a short piece of a scrambled fingerprint mixed with decoys, never the address), to Mozilla and Google for Widevine only after you say yes to protected video, and to `feedback.electream.com` only when you press Send in Feedback, sending exactly what the sheet shows. Extensions you install yourself make their own connections, and Proton Pass talks to Proton.
 
 ## Something broke?
 
-1. Open **Preferences** (the gear at the bottom of Kite's sidebar), scroll to **About** and press **Copy diagnostics**.
-2. Open a new issue in this repo and paste it in, with a sentence about what you did and what happened.
+Open **Preferences** (the gear at the bottom of Kite's sidebar), then **About** > **Send feedback**. Pick **Bug** or **Idea**, write what you did and what happened, and press **Send**. The sheet shows exactly what will be sent, and nothing goes before you press Send.
+
+You can also press **Copy diagnostics** in About and paste the result into a new issue in this repo.
 
 The diagnostics are versions, a check of Kite's settings and the last update events. They never contain the addresses, titles or searches of pages you visited.
 
-Kite writes no logs and sends nothing: there is no log file on your PC and nothing to upload. Copy diagnostics only puts text on your clipboard, and you paste it where you choose.
+Kite writes no logs. It sends nothing unless you press Send in Feedback. Copy diagnostics only puts text on your clipboard, and you paste it where you choose.
 
 ## Uninstall
 
